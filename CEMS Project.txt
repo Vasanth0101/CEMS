@@ -1,0 +1,85 @@
+Here is a basic example of a college event management system using Java and HTML:
+
+Java Code:
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EventManagementSystem {
+    private List<Event> events;
+
+    public EventManagementSystem() {
+        events = new ArrayList<>();
+    }
+
+    public void addEvent(Event event) {
+        events.add(event);
+    }
+
+    public void removeEvent(Event event) {
+        events.remove(event);
+    }
+
+    public List<Event> getEvents() {
+        return events;
+    }
+}
+
+class Event {
+    private String name;
+    private String date;
+    private String time;
+    private String location;
+
+    public Event(String name, String date, String time, String location) {
+        this.name = name;
+        this.date = date;
+        this.time = time;
+        this.location = location;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+}
+
+
+HTML Code:
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Event Management System</title>
+</head>
+<body>
+    <h1>College Event Management System</h1>
+    <form action="addEvent" method="post">
+        <label for="name">Event Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="date">Event Date:</label>
+        <input type="date" id="date" name="date"><br><br>
+        <label for="time">Event Time:</label>
+        <input type="time" id="time" name="time"><br><br>
+        <label for="location">Event Location:</label>
+        <input type="text" id="location" name="location"><br><br>
+        <input type="submit" value="Add Event">
+    </form>
+
+    <h2>Upcoming Events:</h2>
+    <ul>
+        <!-- Display events here -->
+    </ul>
+</body>
+</html>
